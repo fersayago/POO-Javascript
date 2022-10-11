@@ -44,3 +44,38 @@ const juanita = new Student(
     'Curso de Responsive Design'
   ]
 );
+
+// Prototipos con la sintaxis de CLASES
+
+class StundentFromClass{
+  constructor({
+    name,
+    age,
+    email = "a@a.com", // PARAMETRO POR DEFECTO
+    facebook,
+    twitter,
+    instagram,
+    cursosAprobados
+  }){
+    this.name = name;
+    this.age = age;
+    this.email = email;
+    this.facebook = facebook;
+    this.twitter = twitter;
+    this.instagram = instagram;
+    this.cursosAprobados = cursosAprobados;
+  }
+
+  aprobarCurso(nuevoCursito){
+    this.cursosAprobados.push(nuevoCursito);
+  }
+}
+
+const miguelito = new StundentFromClass({
+  name: 'Miguelito',
+  age: 18,
+  cursosAprobados: [
+    'Curso de Introduccion a la Programacion',
+    'Curso de HTML y CSS',
+  ]
+});
